@@ -1,0 +1,61 @@
+<!--![][visitors]-->
+![][followers]
+![][stars]
+
+![Android](https://img.shields.io/badge/-Android-black?style=flat&logo=android)
+![Kotlin](https://img.shields.io/badge/-Kotlin-black?style=flat&logo=kotlin)
+![iOS](https://img.shields.io/badge/-iOS-black?style=flat&logo=ios)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
+![](https://img.shields.io/badge/Platforms-Android_|_iOS_|_KMM_|_Web-blueviolet?logo=appveyor&style=?style=for-the-badge&logo=appveyor)
+
+------
+
+### Hi, I’m Rob 👋 - Head of Engineering @ [Cognetivity](https://cognetivity.com)
+
+## 😀 ☀️ 🎉
+```kotlin
+sealed interface Interest {
+  object Tech {
+    object IOS: Tech
+    object Android: Tech
+    data class NativeMobile(val ios: IOS, val android: Android): Tech
+
+    object Web: Tech
+    object Server: Tech
+
+    data class KMM(
+      val coroutines: Coroutines,
+      val native: NativeMobile,
+      val web: Web,
+      val server: Server
+    ): Tech
+  }
+
+  object Quality {
+    data class Architecture(val all: [Interests]): Quality
+    object BestPractices: Quality
+    object HexagonalArchitecture: Quality
+    object TDD: Quality
+    object Management: Quality
+  }
+}
+```
+
+## 🌱 📖 ✨
+```kotlin
+fun main() {
+  val allInterests = Interest::class.sealedSubclasses
+  learn(studies = allInterests)
+}
+```
+
+## 📫 🔗 📨[^1]
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white)][linkedin]
+
+[^1]: (Sorry in advance if I don't reply, I can be a bit s*** at it. Mention github and I'll be more likely to connect!)
+
+[visitors]: https://visitor-badge.laobi.icu/badge?page_id=RowbDowg
+[followers]: https://img.shields.io/github/followers/RowbDowg?style=social
+[stars]: https://img.shields.io/github/stars/RowbDowg?style=social
+[linkedin]: https://www.linkedin.com/in/rob-valdes/
