@@ -45,12 +45,12 @@ fun main() {
 }
 ```
 
-## 📫 🔗 📨[^1]
+## 📫 🔗 📨
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white)][linkedin]
 
-[^1]: (Sorry in advance if I don't reply, I can be a bit s*** at it. Mention github and I'll be more likely to connect!)
+<sub>(Sorry in advance if I don't reply, I can be a bit s*** at it. Mention github and I'll be more likely to connect!)</sub>
 
 [visitors]: https://visitor-badge.laobi.icu/badge?page_id=RowbDowg-me
-[followers]: https://img.shields.io/github/followers/RowbDowg?style=social
-[stars]: https://img.shields.io/github/stars/RowbDowg?style=social
+[followers]: https://img.shields.io/github/followers/RowbDowg
+[stars]: https://img.shields.io/github/stars/RowbDowg
 [linkedin]: https://www.linkedin.com/in/rob-valdes/
