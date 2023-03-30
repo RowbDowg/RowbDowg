@@ -1,6 +1,8 @@
+<!--
 ![][visitors]
 ![][followers]
 ![][stars]
+-->
 
 ![](https://img.shields.io/badge/Platforms-Android_|_iOS_|_KMM_|_Web-blueviolet?logo=appveyor&style=?style=for-the-badge&logo=appveyor)
 
