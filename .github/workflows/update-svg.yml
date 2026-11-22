@@ -36,17 +36,12 @@ jobs:
         env:
           # Classic token stored as a repo secret named GH_PROFILE_TOKEN, with only the repo:status,
           # read:user and read:org scopes; together these expose private repos in contribution data.
-          # Falls back to the default GITHUB_TOKEN if the secret isn't set; that token can't see private
-          # repos outside this one, so the run warns and the SVG only reflects public activity.
-          GITHUB_TOKEN: ${{ secrets.GH_PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
-          USING_PROFILE_TOKEN: ${{ secrets.GH_PROFILE_TOKEN != '' }}
+          # The default GITHUB_TOKEN can't see private repos outside this one, so it isn't used as a
+          # fallback; if the secret is missing the run fails rather than publishing public-only data.
+          GITHUB_TOKEN: ${{ secrets.GH_PROFILE_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
           OUTPUT_PATH: terminal.svg
-        run: |
-          if [ "$USING_PROFILE_TOKEN" != "true" ]; then
-            echo "::warning::GH_PROFILE_TOKEN is not set; using the default GITHUB_TOKEN, so private repositories are excluded"
-          fi
-          go run svg_generator.go
+        run: go run svg_generator.go
 
       - name: Commit updated SVG if changed
         run: |
