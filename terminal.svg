@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 366" width="820" height="366">
+  <style>
+    .bg { fill: #0F172A; stroke: #1E293B; stroke-width: 1.5; }
+    .header { fill: #1E293B; }
+    .title { fill: #94A3B8; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; }
+    .text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13.5px; }
+    .prompt { fill: #F97316; font-weight: bold; }
+    .cmd { fill: #F8FAFC; }
+    .label { fill: #64748B; }
+    .num { fill: #FBBF24; }
+    .muted { fill: #64748B; font-size: 12px; }
+    .spark { fill: #34D399; }
+    .spark-idle { fill: #334155; }
+    .track { fill: #1E293B; }
+    .bar { fill: #38BDF8; }
+    .line { opacity: 0; animation: fadeIn 0.25s ease-out forwards; }
+    .l1 { animation-delay: 0.15s; }
+    .l2 { animation-delay: 0.45s; }
+    .l3 { animation-delay: 0.65s; }
+    .l8 { animation-delay: 1.75s; }
+    .cursor { fill: #F97316; animation: blink 1s step-end infinite; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Window Frame -->
+  <rect class="bg" x="1" y="1" width="818" height="364" rx="10" />
+  <path class="header" d="M 11 1 H 809 A 10 10 0 0 1 819 11 V 36 H 1 V 11 A 10 10 0 0 1 11 1 Z" />
+
+  <!-- Window Controls -->
+  <circle cx="22" cy="19" r="6" fill="#EF4444" />
+  <circle cx="42" cy="19" r="6" fill="#F59E0B" />
+  <circle cx="62" cy="19" r="6" fill="#10B981" />
+  <text class="title" x="410" y="23" text-anchor="middle">rob@london: ~/craft — zsh</text>
+
+  <!-- Terminal Body -->
+  <g class="text">
+    <text class="line l1" x="24" y="68">
+      <tspan class="prompt">❯ </tspan>
+      <tspan class="cmd">rob status --since 30d</tspan>
+    </text>
+
+    <!-- Daily activity sparkline -->
+    <g class="line l2">
+      <text class="label" x="44" y="112">activity</text>
+      <rect class="spark" x="170" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="184" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="198" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="212" y="96" width="10" height="18" rx="1.5" />
+      <rect class="spark" x="226" y="104" width="10" height="10" rx="1.5" />
+      <rect class="spark" x="240" y="108" width="10" height="6" rx="1.5" />
+      <rect class="spark" x="254" y="109" width="10" height="5" rx="1.5" />
+      <rect class="spark" x="268" y="97" width="10" height="17" rx="1.5" />
+      <rect class="spark" x="282" y="109" width="10" height="5" rx="1.5" />
+      <rect class="spark" x="296" y="106" width="10" height="8" rx="1.5" />
+      <rect class="spark" x="310" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark-idle" x="324" y="112" width="10" height="2" rx="1.5" />
+      <rect class="spark-idle" x="338" y="112" width="10" height="2" rx="1.5" />
+      <rect class="spark" x="352" y="109" width="10" height="5" rx="1.5" />
+      <rect class="spark" x="366" y="109" width="10" height="5" rx="1.5" />
+      <rect class="spark" x="380" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="394" y="109" width="10" height="5" rx="1.5" />
+      <rect class="spark" x="408" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="422" y="106" width="10" height="8" rx="1.5" />
+      <rect class="spark" x="436" y="94" width="10" height="20" rx="1.5" />
+      <rect class="spark" x="450" y="108" width="10" height="6" rx="1.5" />
+      <rect class="spark" x="464" y="109" width="10" height="5" rx="1.5" />
+      <rect class="spark" x="478" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="492" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="506" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="520" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="534" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="548" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark-idle" x="562" y="112" width="10" height="2" rx="1.5" />
+      <rect class="spark-idle" x="576" y="112" width="10" height="2" rx="1.5" />
+      <text x="600" y="112"><tspan class="num">26</tspan><tspan class="label">/30 days active</tspan></text>
+    </g>
+
+    <!-- Totals -->
+    <text class="line l3" y="152">
+      <tspan class="label" x="44">contributions</tspan><tspan class="num" x="170">717</tspan>
+      <tspan class="label" x="310">repositories</tspan><tspan class="num" x="430">9</tspan>
+    </text>
+
+    <!-- Languages by share of commits -->
+    <text class="line l3" x="44" y="190"><tspan class="label">languages</tspan></text>
+    <g class="line" style="animation-delay: 0.85s">
+      <text class="cmd" x="170" y="190">Dart</text>
+      <rect class="track" x="310" y="190" width="280" height="10" rx="2" transform="translate(0 -10)" />
+      <rect class="bar" x="310" y="190" width="148" height="10" rx="2" transform="translate(0 -10)" />
+      <text class="num" x="640" y="190" text-anchor="end">53%</text>
+    </g>
+    <g class="line" style="animation-delay: 1.00s">
+      <text class="cmd" x="170" y="214">TypeScript</text>
+      <rect class="track" x="310" y="214" width="280" height="10" rx="2" transform="translate(0 -10)" />
+      <rect class="bar" x="310" y="214" width="98" height="10" rx="2" transform="translate(0 -10)" />
+      <text class="num" x="640" y="214" text-anchor="end">35%</text>
+    </g>
+    <g class="line" style="animation-delay: 1.15s">
+      <text class="cmd" x="170" y="238">Python</text>
+      <rect class="track" x="310" y="238" width="280" height="10" rx="2" transform="translate(0 -10)" />
+      <rect class="bar" x="310" y="238" width="16" height="10" rx="2" transform="translate(0 -10)" />
+      <text class="num" x="640" y="238" text-anchor="end">6%</text>
+    </g>
+    <g class="line" style="animation-delay: 1.30s">
+      <text class="cmd" x="170" y="262">PHP</text>
+      <rect class="track" x="310" y="262" width="280" height="10" rx="2" transform="translate(0 -10)" />
+      <rect class="bar" x="310" y="262" width="11" height="10" rx="2" transform="translate(0 -10)" />
+      <text class="num" x="640" y="262" text-anchor="end">4%</text>
+    </g>
+    <g class="line" style="animation-delay: 1.45s">
+      <text class="cmd" x="170" y="286">Kotlin</text>
+      <rect class="track" x="310" y="286" width="280" height="10" rx="2" transform="translate(0 -10)" />
+      <rect class="bar" x="310" y="286" width="8" height="10" rx="2" transform="translate(0 -10)" />
+      <text class="num" x="640" y="286" text-anchor="end">3%</text>
+    </g>
+
+    <!-- Active Prompt & Sync Timestamp -->
+    <g class="line l8">
+      <text class="prompt" x="24" y="334">❯</text>
+      <rect class="cursor" x="42" y="334" width="9" height="16" transform="translate(0 -13)" />
+      <text class="muted" x="796" y="334" text-anchor="end">synced 2026-11-22 19:46 UTC</text>
+    </g>
+  </g>
+</svg>

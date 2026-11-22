@@ -1,0 +1,60 @@
+name: Update Profile SVG
+
+on:
+  schedule:
+    # Runs daily at 06:30 UTC
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "svg_generator.go"
+      - ".github/workflows/update-svg.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-svg
+  cancel-in-progress: false
+
+jobs:
+  render-terminal:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Go
+        uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5 # v7.1.0
+        with:
+          go-version: stable
+
+      - name: Generate terminal.svg
+        env:
+          # Classic token stored as a repo secret named GH_PROFILE_TOKEN, with only the repo:status,
+          # read:user and read:org scopes; together these expose private repos in contribution data.
+          # Falls back to the default GITHUB_TOKEN if the secret isn't set; that token can't see private
+          # repos outside this one, so the run warns and the SVG only reflects public activity.
+          GITHUB_TOKEN: ${{ secrets.GH_PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          USING_PROFILE_TOKEN: ${{ secrets.GH_PROFILE_TOKEN != '' }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          OUTPUT_PATH: terminal.svg
+        run: |
+          if [ "$USING_PROFILE_TOKEN" != "true" ]; then
+            echo "::warning::GH_PROFILE_TOKEN is not set; using the default GITHUB_TOKEN, so private repositories are excluded"
+          fi
+          go run svg_generator.go
+
+      - name: Commit updated SVG if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add terminal.svg
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: refresh live terminal telemetry"
+            git pull --rebase
+            git push
+          fi
