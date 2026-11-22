@@ -188,10 +188,10 @@ func main() {
 }
 
 func fetchGitHubTelemetry(username, token string) (TemplateData, error) {
-	// Pass both ends of the window: without "to", GitHub ends it a year after "from", padding the calendar with future days.
 	now := time.Now().UTC()
-	from := now.AddDate(0, 0, -30).Format(time.RFC3339)
-	to := now.Format(time.RFC3339)
+	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, time.UTC)
+	from := today.AddDate(0, 0, -30).Format(time.RFC3339)
+	to := today.Add(-time.Second).Format(time.RFC3339)
 
 	var telemetry telemetryData
 	if err := postGraphQL(token, graphQLQuery, map[string]any{"login": username, "from": from, "to": to}, &telemetry); err != nil {
@@ -245,13 +245,13 @@ func fetchGitHubTelemetry(username, token string) (TemplateData, error) {
 		return TemplateData{}, err
 	}
 
-	// The calendar can include days outside the window, so keep only the last 30 up to today.
+	// The calendar can include days outside the window, so keep only the 30 days from "from" to yesterday.
 	fromDate := from[:len("2006-01-02")]
 	toDate := to[:len("2006-01-02")]
 	var dailyCounts []int
 	for _, week := range cc.ContributionCalendar.Weeks {
 		for _, day := range week.ContributionDays {
-			if day.Date > fromDate && day.Date <= toDate {
+			if day.Date >= fromDate && day.Date <= toDate {
 				dailyCounts = append(dailyCounts, day.ContributionCount)
 			}
 		}
