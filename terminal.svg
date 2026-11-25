@@ -51,41 +51,41 @@
     <g class="line l2">
       <text class="label" x="44" y="112">activity</text>
       <rect class="spark" x="170" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="184" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="198" y="104" width="10" height="10" rx="1.5" />
-      <rect class="spark" x="212" y="109" width="10" height="5" rx="1.5" />
-      <rect class="spark" x="226" y="110" width="10" height="4" rx="1.5" />
-      <rect class="spark" x="240" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="254" y="95" width="10" height="19" rx="1.5" />
-      <rect class="spark" x="268" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="282" y="110" width="10" height="4" rx="1.5" />
-      <rect class="spark" x="296" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="184" y="104" width="10" height="10" rx="1.5" />
+      <rect class="spark" x="198" y="109" width="10" height="5" rx="1.5" />
+      <rect class="spark" x="212" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="226" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="240" y="95" width="10" height="19" rx="1.5" />
+      <rect class="spark" x="254" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="268" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="282" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark-idle" x="296" y="112" width="10" height="2" rx="1.5" />
       <rect class="spark-idle" x="310" y="112" width="10" height="2" rx="1.5" />
-      <rect class="spark-idle" x="324" y="112" width="10" height="2" rx="1.5" />
+      <rect class="spark" x="324" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="338" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="352" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="366" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="380" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="394" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="408" y="110" width="10" height="4" rx="1.5" />
-      <rect class="spark" x="422" y="94" width="10" height="20" rx="1.5" />
-      <rect class="spark" x="436" y="105" width="10" height="9" rx="1.5" />
-      <rect class="spark" x="450" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="394" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="408" y="94" width="10" height="20" rx="1.5" />
+      <rect class="spark" x="422" y="105" width="10" height="9" rx="1.5" />
+      <rect class="spark" x="436" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="450" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="464" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="478" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="492" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="506" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="520" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="534" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark-idle" x="548" y="112" width="10" height="2" rx="1.5" />
-      <rect class="spark" x="562" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark-idle" x="534" y="112" width="10" height="2" rx="1.5" />
+      <rect class="spark" x="548" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark-idle" x="562" y="112" width="10" height="2" rx="1.5" />
       <rect class="spark-idle" x="576" y="112" width="10" height="2" rx="1.5" />
-      <text x="600" y="112"><tspan class="num">26</tspan><tspan class="label">/30 days active</tspan></text>
+      <text x="600" y="112"><tspan class="num">25</tspan><tspan class="label">/30 days active</tspan></text>
     </g>
 
     <!-- Totals -->
     <text class="line l3" y="152">
-      <tspan class="label" x="44">contributions</tspan><tspan class="num" x="170">1088</tspan>
+      <tspan class="label" x="44">contributions</tspan><tspan class="num" x="170">1086</tspan>
       <tspan class="label" x="310">repositories</tspan><tspan class="num" x="430">12</tspan>
     </text>
 
@@ -126,7 +126,7 @@
     <g class="line l8">
       <text class="prompt" x="24" y="334">❯</text>
       <rect class="cursor" x="42" y="334" width="9" height="16" transform="translate(0 -13)" />
-      <text class="muted" x="796" y="334" text-anchor="end">synced 2026-11-24 18:04 UTC</text>
+      <text class="muted" x="796" y="334" text-anchor="end">synced 2026-11-25 17:29 UTC</text>
     </g>
   </g>
 </svg>
