@@ -50,42 +50,42 @@
     <!-- Daily activity sparkline -->
     <g class="line l2">
       <text class="label" x="44" y="112">activity</text>
-      <rect class="spark" x="170" y="104" width="10" height="10" rx="1.5" />
-      <rect class="spark" x="184" y="109" width="10" height="5" rx="1.5" />
-      <rect class="spark" x="198" y="110" width="10" height="4" rx="1.5" />
-      <rect class="spark" x="212" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="226" y="95" width="10" height="19" rx="1.5" />
-      <rect class="spark" x="240" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="254" y="110" width="10" height="4" rx="1.5" />
-      <rect class="spark" x="268" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="170" y="109" width="10" height="5" rx="1.5" />
+      <rect class="spark" x="184" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="198" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="212" y="95" width="10" height="19" rx="1.5" />
+      <rect class="spark" x="226" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="240" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="254" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark-idle" x="268" y="112" width="10" height="2" rx="1.5" />
       <rect class="spark-idle" x="282" y="112" width="10" height="2" rx="1.5" />
-      <rect class="spark-idle" x="296" y="112" width="10" height="2" rx="1.5" />
+      <rect class="spark" x="296" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="310" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="324" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="338" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="352" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="366" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="380" y="110" width="10" height="4" rx="1.5" />
-      <rect class="spark" x="394" y="94" width="10" height="20" rx="1.5" />
-      <rect class="spark" x="408" y="105" width="10" height="9" rx="1.5" />
-      <rect class="spark" x="422" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="366" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="380" y="94" width="10" height="20" rx="1.5" />
+      <rect class="spark" x="394" y="105" width="10" height="9" rx="1.5" />
+      <rect class="spark" x="408" y="110" width="10" height="4" rx="1.5" />
+      <rect class="spark" x="422" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="436" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="450" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="464" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="478" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark" x="492" y="111" width="10" height="3" rx="1.5" />
+      <rect class="spark" x="478" y="105" width="10" height="9" rx="1.5" />
+      <rect class="spark" x="492" y="109" width="10" height="5" rx="1.5" />
       <rect class="spark" x="506" y="111" width="10" height="3" rx="1.5" />
-      <rect class="spark-idle" x="520" y="112" width="10" height="2" rx="1.5" />
+      <rect class="spark" x="520" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark" x="534" y="111" width="10" height="3" rx="1.5" />
       <rect class="spark-idle" x="548" y="112" width="10" height="2" rx="1.5" />
       <rect class="spark-idle" x="562" y="112" width="10" height="2" rx="1.5" />
       <rect class="spark-idle" x="576" y="112" width="10" height="2" rx="1.5" />
-      <text x="600" y="112"><tspan class="num">24</tspan><tspan class="label">/30 days active</tspan></text>
+      <text x="600" y="112"><tspan class="num">25</tspan><tspan class="label">/30 days active</tspan></text>
     </g>
 
     <!-- Totals -->
     <text class="line l3" y="152">
-      <tspan class="label" x="44">contributions</tspan><tspan class="num" x="170">1075</tspan>
+      <tspan class="label" x="44">contributions</tspan><tspan class="num" x="170">1094</tspan>
       <tspan class="label" x="310">repositories</tspan><tspan class="num" x="430">12</tspan>
     </text>
 
@@ -94,8 +94,8 @@
     <g class="line" style="animation-delay: 0.85s">
       <text class="cmd" x="170" y="190">Kotlin</text>
       <rect class="track" x="310" y="190" width="280" height="10" rx="2" transform="translate(0 -10)" />
-      <rect class="bar" x="310" y="190" width="123" height="10" rx="2" transform="translate(0 -10)" />
-      <text class="num" x="640" y="190" text-anchor="end">44%</text>
+      <rect class="bar" x="310" y="190" width="137" height="10" rx="2" transform="translate(0 -10)" />
+      <text class="num" x="640" y="190" text-anchor="end">49%</text>
     </g>
     <g class="line" style="animation-delay: 1.00s">
       <text class="cmd" x="170" y="214">Dart</text>
@@ -106,8 +106,8 @@
     <g class="line" style="animation-delay: 1.15s">
       <text class="cmd" x="170" y="238">TypeScript</text>
       <rect class="track" x="310" y="238" width="280" height="10" rx="2" transform="translate(0 -10)" />
-      <rect class="bar" x="310" y="238" width="56" height="10" rx="2" transform="translate(0 -10)" />
-      <text class="num" x="640" y="238" text-anchor="end">20%</text>
+      <rect class="bar" x="310" y="238" width="44" height="10" rx="2" transform="translate(0 -10)" />
+      <text class="num" x="640" y="238" text-anchor="end">16%</text>
     </g>
     <g class="line" style="animation-delay: 1.30s">
       <text class="cmd" x="170" y="262">Python</text>
@@ -126,7 +126,7 @@
     <g class="line l8">
       <text class="prompt" x="24" y="334">❯</text>
       <rect class="cursor" x="42" y="334" width="9" height="16" transform="translate(0 -13)" />
-      <text class="muted" x="796" y="334" text-anchor="end">synced 2026-11-26 17:11 UTC</text>
+      <text class="muted" x="796" y="334" text-anchor="end">synced 2026-11-27 16:53 UTC</text>
     </g>
   </g>
 </svg>
